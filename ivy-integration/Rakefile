@@ -1,0 +1,66 @@
+# Based on example at http://blog.headius.com/2010/04/using-ivy-with-jruby-15-ant-integration.html
+
+# Run 'jruby -S rake ivy:install' at first time to install ivy.
+# After that, run 'jruby -S rake run'
+
+require 'ant'
+
+namespace :ivy do
+  ivy_install_version = '2.2.0'
+  ivy_jar_dir = './ivy'
+  ivy_jar_file = "#{ivy_jar_dir}/ivy.jar"
+
+  task :setup do
+    ant.path :id => 'ivy.lib.path' do
+      fileset :dir => ivy_jar_dir, :includes => '*.jar'
+    end
+    ant.taskdef :resource => "org/apache/ivy/ant/antlib.xml",
+      :classpathref => "ivy.lib.path"
+  end
+
+  task :install do
+    ant.mkdir :dir => ivy_jar_dir
+    ant.get :src => "http://repo1.maven.org/maven2/org/apache/ivy/ivy/#{ivy_install_version}/ivy-#{ivy_install_version}.jar",
+      :dest => ivy_jar_file,
+      :usetimestamp => true
+  end
+end
+
+def ivy_cache(org, mod, rev)
+  ref = {
+    :organisation => org,
+    :module => mod,
+    :revision => rev,
+    :inline => true
+  }
+  ant.cachepath ref.merge(:pathid => "lib.path.id")
+  ant.retrieve ref.merge(:pattern => 'lib/[conf]/[artifact].[ext]')
+end
+
+#### main task definitions ####
+
+task :setup do
+  ant.property :name => "build.dir", :value => "build"
+  ant.property :name => "src.dir", :value => "src"
+end
+
+task :retrieve => 'ivy:setup' do
+  ivy_cache('commons-lang', 'commons-lang', 2.1)
+end
+
+task :compile => [:setup, :retrieve] do
+  ant.mkdir :dir => "${build.dir}"
+  ant.javac :destdir => "${build.dir}", :includeantruntime => false do
+    # use cachedpath version (lib/* is not used in this example)
+    classpath :refid => "lib.path.id"
+    src { pathelement :location => "${src.dir}" }
+  end
+end
+
+task :run => :compile do
+  ant.java :classname => 'example.Hello', :classpath => "${build.dir}" do
+    classpath :refid => "lib.path.id"
+  end
+end
+
+task :default => :compile
