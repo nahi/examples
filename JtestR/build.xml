@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project basedir="." default="test" name="simple1">
+  <description>
+    Simple example Ant project for jtestr
+  </description>
+
+  <taskdef name="jtestr" classname="org.jtestr.ant.JtestRAntRunner" classpath="jtestr.jar"/>
+  <taskdef name="jtestr-server" classname="org.jtestr.ant.JtestRAntServer" classpath="jtestr.jar"/>
+  
+  <target name="test" description="Runs all tests">
+    <jtestr port="20333"/>
+  </target>
+
+  <target name="test-server" description="Starts test server">
+    <jtestr-server port="20333" runtimes="3"/>
+  </target>
+</project>
