@@ -1,3 +1,5 @@
-0% javac -cp jruby.jar example/Base.java
-0% jruby -S jrubyc -c . --javac derived.rb
-0% java -cp jruby.jar:. example.Base
+# To see how Ruby <-> Java integration work:
+
+javac -cp jruby.jar example/Base.java
+jruby -S jrubyc -c . --javac derived.rb
+java -cp jruby.jar:. example.Base

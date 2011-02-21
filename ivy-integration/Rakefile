@@ -1,8 +1,3 @@
-# Based on example at http://blog.headius.com/2010/04/using-ivy-with-jruby-15-ant-integration.html
-
-# Run 'jruby -S rake ivy:install' at first time to install ivy.
-# After that, run 'jruby -S rake run'
-
 require 'ant'
 
 namespace :ivy do

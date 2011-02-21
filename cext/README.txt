@@ -1,5 +1,4 @@
-0% jruby -S gem install curb
-Fetching: curb-0.7.10.gem (100%)
-Building native extensions.  This could take a while...
-Successfully installed curb-0.7.10
-1 gem installed
+# Install curb gem as usual.
+jruby -S gem install curb
+
+# If it raises an exception, try to build cext from the source. 1.6 GA should bundle pre-built cext libs.

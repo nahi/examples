@@ -1,6 +1,3 @@
-# Install BouncyCastle provier maven artifact via RubyGems first.
-# jruby -S gem install bouncycastle:bcprov-jdk15
-
 require 'java'
 require 'rubygems'
 require 'maven/bouncycastle/bcprov-jdk15'

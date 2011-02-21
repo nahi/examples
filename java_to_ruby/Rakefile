@@ -1,0 +1,14 @@
+require 'ant'
+
+task :compile do
+  ant.mkdir :dir => 'build'
+  ant.javac :destdir => 'build', :includeantruntime => false do
+    src { pathelement :location => '.' }
+  end
+end
+
+task :run => :compile do
+  ant.java :classname => 'SocketAccess', :classpath => 'build'
+end
+
+task :default => :compile

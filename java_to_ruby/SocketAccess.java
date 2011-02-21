@@ -1,5 +1,5 @@
-// This code is written by @uehaj
-// Excerpted from http://www.slideshare.net/uehaj/dev-love-groovy2011 p.7
+// This code is excerpted from http://www.slideshare.net/uehaj/dev-love-groovy2011 p.7
+// written by @uehaj
 
 import java.io.*;
 import java.net.*;
