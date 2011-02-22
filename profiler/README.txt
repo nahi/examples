@@ -1,8 +1,8 @@
 # To run with flat profiler:
-jruby --profile fib.rb
+jruby --profile sieve.rb
 
 # To run with graph profiler:
-jruby --profile.graph fib.rb
+jruby --profile.graph sieve.rb
 
 # To see VisualVM CPU/Memory sampling:
 jruby fib.rb 1 50
