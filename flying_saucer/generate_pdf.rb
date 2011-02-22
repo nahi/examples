@@ -1,5 +1,5 @@
 # This source code is written by Nick Sieger
-# http://www.slideshare.net/nicksieger/jruby-rails-awesome-java-web-framework-at-jfokus-2011
+# https://github.com/nicksieger/java-from-ruby-examples/raw/master/slides.pdf
 
 require 'java'
 require 'flying_saucer'
