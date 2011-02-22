@@ -2,6 +2,7 @@
 # https://github.com/nicksieger/java-from-ruby-examples/raw/master/slides.pdf
 
 require 'java'
+require 'rubygems'
 require 'flying_saucer'
 java_import 'org.xhtmlrenderer.pdf.ITextRenderer'
 
