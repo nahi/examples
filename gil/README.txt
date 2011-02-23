@@ -1,3 +1,5 @@
+## GIL (Global Interpreter Lock) demo.
+
 # To see concurrency aspects of JRuby and CRuby:
 ruby bench_threaded_reverse.rb
 jruby bench_threaded_reverse.rb
