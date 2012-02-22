@@ -1,9 +1,8 @@
 require 'benchmark'
-require_relative 'red_black_tree'
 require_relative 'avl_tree'
 require 'openssl'
 
-TIMES = 100000
+TIMES = 20000
 key_size = 10
 
 keys = []
@@ -11,6 +10,7 @@ TIMES.times do
   keys << OpenSSL::Random.random_bytes(key_size)
 end
 
+=begin
 Benchmark.bmbm do |bm|
   h = AVLTree.new
   bm.report("aset") do
@@ -28,4 +28,20 @@ Benchmark.bmbm do |bm|
       h.delete(k)
     end
   end
+end
+=end
+
+6.times do
+  puts Benchmark.measure {
+    h = AVLTree.new
+    keys.each do |k|
+      h[k] = 1
+    end
+    keys.each do |k|
+      h[k]
+    end
+    keys.each do |k|
+      h.delete(k)
+    end
+  }
 end
