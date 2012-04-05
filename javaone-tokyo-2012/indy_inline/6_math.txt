@@ -1,0 +1,14 @@
+$6_math::method__0$RUBY$target (14 bytes)
+ @ 3   java.lang.invoke.MethodHandle::invokeExact (9 bytes)   inline (hot)
+  @ 2   sun.invoke.util.ValueConversions::identity (2 bytes)   inline (hot)
+ @ 8   java.lang.invoke.MethodHandle::invokeExact (33 bytes)   inline (hot)
+  @ 5   java.lang.invoke.MethodHandle::invokeExact (7 bytes)   inline (hot)
+   @ 3   org.jruby.runtime.invokedynamic.MathLinker::fixnumTest (20 bytes)   inline (hot)
+    @ 8   org.jruby.Ruby::isFixnumReopened (5 bytes)   inline (hot)
+  @ 12   java.lang.invoke.MethodHandle::invokeExact (10 bytes)   inline (hot)
+  @ 29   java.lang.invoke.MethodHandle::invokeExact (7 bytes)   inline (hot)
+  @ 29   java.lang.invoke.MethodHandle::invokeExact (11 bytes)   inline (hot)
+   @ 7   org.jruby.runtime.invokedynamic.MathLinker::fixnumOperatorFail (109 bytes)   never executed
+   @ 3   org.jruby.runtime.invokedynamic.MathLinker::fixnum_op_minus_two (9 bytes)   inline (hot)
+    @ 5   org.jruby.RubyFixnum::op_minus_two (35 bytes)   inline (hot)
+

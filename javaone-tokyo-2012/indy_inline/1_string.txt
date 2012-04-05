@@ -1,0 +1,27 @@
+$1_string::method__0$RUBY$target (7 bytes)
+   @ 1   java.lang.invoke.MethodHandle::invokeExact (12 bytes)   inline (hot)
+     @ 5   org.jruby.runtime.invokedynamic.InvokeDynamicSupport::newString (10 bytes)   inline (hot)
+       @ 6   org.jruby.RubyString::newStringShared (22 bytes)   inline (hot)
+         @ 6   org.jruby.Ruby::getString (5 bytes)   inline (hot)
+         @ 11   org.jruby.RubyString::<init> (19 bytes)   inline (hot)
+           @ 4   org.jruby.RubyString::<init> (35 bytes)   inline (hot)
+             @ 3   org.jruby.RubyObject::<init> (7 bytes)   inline (hot)
+               @ 3   org.jruby.RubyBasicObject::<init> (42 bytes)   inline (hot)
+                 @ 1   java.lang.Object::<init> (1 bytes)   inline (hot)
+                 @ 30   org.jruby.Ruby::isObjectSpaceEnabled (5 bytes)   inline (hot)
+                 @ 38   org.jruby.RubyBasicObject::addToObjectSpace (30 bytes)   never executed
+
+$1_string::method__0$RUBY$target (8 bytes)
+   @ 4   org.jruby.ast.executable.AbstractScript::getString0 (11 bytes)   inline (hot)
+     @ 7   org.jruby.ast.executable.RuntimeCache::getString (14 bytes)   inline (hot)
+       @ 6   org.jruby.ast.executable.RuntimeCache::getByteList (7 bytes)   inline (hot)
+       @ 10   org.jruby.RubyString::newStringShared (22 bytes)   inline (hot)
+         @ 6   org.jruby.Ruby::getString (5 bytes)   inline (hot)
+         @ 11   org.jruby.RubyString::<init> (19 bytes)   inline (hot)
+           @ 4   org.jruby.RubyString::<init> (35 bytes)   inline (hot)
+             @ 3   org.jruby.RubyObject::<init> (7 bytes)   inline (hot)
+               @ 3   org.jruby.RubyBasicObject::<init> (42 bytes)   inline (hot)
+                 @ 1   java.lang.Object::<init> (1 bytes)   inline (hot)
+                 @ 30   org.jruby.Ruby::isObjectSpaceEnabled (5 bytes)   inline (hot)
+                 @ 38   org.jruby.RubyBasicObject::addToObjectSpace (30 bytes)   never executed
+

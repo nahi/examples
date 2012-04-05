@@ -1,0 +1,12 @@
+$2_literal::method__0$RUBY$target (7 bytes)
+   @ 1   java.lang.invoke.MethodHandle::invokeExact (9 bytes)   inline (hot)
+     @ 2   sun.invoke.util.ValueConversions::identity (2 bytes)   inline (hot)
+
+
+
+   @ 36   $2_literal$method__0$RUBY$target::call (13 bytes)   inline (hot)
+     @ 9   $2_literal$method__0$RUBY$target::call (21 bytes)   inline (hot)
+       @ 17   $2_literal::method__0$RUBY$target (9 bytes)   inline (hot)
+         @ 5   org.jruby.ast.executable.AbstractScript::getFixnum0 (11 bytes)   inline (hot)
+           @ 7   org.jruby.ast.executable.RuntimeCache::getFixnum (33 bytes)   inline (hot)
+
